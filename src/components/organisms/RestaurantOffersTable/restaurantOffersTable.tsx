@@ -14,11 +14,12 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import OfferDetail from '../offerDetail/offerDetail';
+import { green, grey , brown} from '@mui/material/colors';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
+      backgroundColor: brown[600],
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -75,8 +76,12 @@ function RestaurantOfferView() {
   const handleClose = () => setOpen(false);
   return (
     <div>
-       <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+       <TableContainer component={Paper} sx={
+        {alignSelf: "center",
+        bgcolor: 'background.paper',
+        boxShadow: 10,}
+       }>
+      <Table sx={{ minWidth: 750}} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell >Product Name</StyledTableCell>
