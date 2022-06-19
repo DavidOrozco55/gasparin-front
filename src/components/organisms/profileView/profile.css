@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.Profile-container{
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #F5F3F4;
+}
+
+.Profile-icon{
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding: 10px;
+}
+
+.Profile-description{
+   
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.Profile-basic-information{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: left;
+    padding: 10px;
+}
+
+.Profile-contact-information{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: left;
+    padding: 10px;
+}
