@@ -2,6 +2,9 @@ import { useEffect } from "react";
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
+import RestaurantView from "./components/pages/restaurantView";
+import TopBar from "./components/organisms/TopBar/topBar"
+
 const App: FC = () => {
   const navigate = useNavigate()
   useEffect(() => {

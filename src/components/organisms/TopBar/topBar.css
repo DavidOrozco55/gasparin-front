@@ -1,0 +1,30 @@
+.Top-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.Logo-icon {
+    max-height: 50px;
+}
+
+.BCD-icon{
+    max-height: 50px;
+}
+
+.Right-content {
+    display: flex;
+    align-items: center;
+}
+
+.Bell-icon {
+    height: 35px;
+    color: #EEEF20;
+    margin-right: 1rem;
+}
+
+.User-name {
+    font-size: 2rem;
+}
