@@ -1,5 +1,6 @@
+import { Button, IconButton } from "@mui/material";
 import "./topBar.css"
-
+import LogOutButton from '@mui/icons-material/Logout'
 const BcdLogo = require("../../../img/LaBCD_LOGO.png");
 const Bell = require("../../../assets/campana.png")
 function TopBar() {
@@ -11,6 +12,9 @@ function TopBar() {
 				<div className="Right-content">
 					<img src={Bell} className="Bell-icon" alt='campanita'/>
 					<span className="User-name">Alfredo's</span>
+					<IconButton aria-label="LogOut" size="large">
+						<LogOutButton></LogOutButton>
+					</IconButton>
 				</div>
 			</head>
 		);
