@@ -1,15 +1,16 @@
-import "./Profile.css"
-//import imgProfile from "../../assets/images/windmill_farms_logo_profile_pic.png";
+import "./profile.css"
 import { Button, List, ListItemText } from '@mui/material';
 import { fontWeight } from '@mui/system';
-import EditIcon from '@material-ui/icons/Edit';
+
+const imgProfile = require("../../../img/windmill_farms_logo_profile_pic.png");
+
 function Profile() {
   return (
     
     <div className='Profile-container'>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300&display=swap" rel="stylesheet"></link>
       <div className='Profile-icon'>
-        <img  alt="prof_img" className='profile-img' />
+        <img src={imgProfile} alt="prof_img" className='profile-img' />
       </div>
       <div className='Profile-description'>
         
@@ -75,7 +76,7 @@ function Profile() {
         
       </div>
       <div className='Edit-button-container'>
-        <Button variant="contained" color="success" size='large' endIcon={<EditIcon />}
+        <Button variant="contained" color="success" size='large'
         className="Edit-button">Edit</Button>
       </div>
     </div>
