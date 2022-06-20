@@ -14,7 +14,6 @@ const Login: FC = () => {
   })
   return (
     <Fragment>
-      <TopBar></TopBar>
       <LoginForm></LoginForm>
     </Fragment>
   )
