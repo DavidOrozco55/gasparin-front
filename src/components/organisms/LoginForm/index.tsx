@@ -11,12 +11,8 @@ import { FC } from 'react';
 import insumosREST from '../../../provider';
 import { useNavigate } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
-
-interface loginResponse {
-  accessToken: string
-  refreshToken: string
-  userType: 'seller' | 'restaurant'
-}
+import swal from 'sweetalert2'
+import { AxiosError } from 'axios';
 
 const LoginForm: FC = () => {
   const navigate = useNavigate()
@@ -35,7 +31,22 @@ const LoginForm: FC = () => {
       }))
       navigate('/')
     } catch (error) {
-      console.log(error)
+      if (error instanceof AxiosError) {
+        let title, text
+        if (error.response.status === 401) {
+          title = 'Error al iniciar sesión'
+          text = 'Por favor, verifica tus credenciales'
+        } else {
+          title = 'Error al iniciar sesión'
+          text = 'No pudimos conectarnos al back'
+        }
+        swal.fire({
+          title,
+          text,
+          icon: 'error',
+          color: 'FF0000'
+        }) 
+      }
     }
   };
 

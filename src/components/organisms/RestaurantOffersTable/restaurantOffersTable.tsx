@@ -107,6 +107,7 @@ function RestaurantOfferView() {
         BackdropProps={{
           timeout: 500,
         }}
+        
       >
         <Fade in={open}>
           <Box sx={modalStyle}>

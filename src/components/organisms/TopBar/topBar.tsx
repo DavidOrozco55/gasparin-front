@@ -5,10 +5,10 @@ const BcdLogo = require("../../../img/LaBCD_LOGO.png");
 const Bell = require("../../../assets/campana.png")
 function TopBar() {
     return (
-			<head className="Top-bar-container">
+			<div className="Top-bar-container">
 				<div>
-                    <img src={BcdLogo} alt="logo_BCD" className="BCD-icon"></img>
-                </div>
+          <img src="../../../img/LaBCD_LOGO.png" alt="logo_BCD" className="BCD-icon"></img>
+        </div>
 				<div className="Right-content">
 					<img src={Bell} className="Bell-icon" alt='campanita'/>
 					<span className="User-name">Alfredo's</span>
@@ -16,8 +16,8 @@ function TopBar() {
 						<LogOutButton></LogOutButton>
 					</IconButton>
 				</div>
-			</head>
+			</div>
 		);
 }
 
-export default TopBar;
+export default TopBar
