@@ -6,9 +6,8 @@ import Login from './components/pages/login'
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="login" element={<Login />} />
-      </Route>
+      <Route path="/" element={<App />} />
+      <Route path="login" element={<Login />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
